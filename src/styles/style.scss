@@ -1,0 +1,39 @@
+body {
+  font-family: var(--font);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: var(--c-charcoal);
+  background-color: var(--c-frost);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font);
+  font-weight: 600;
+  color: var(--c-charcoal);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h1 { letter-spacing: -0.03em; }
+
+p {
+  color: var(--c-gray700);
+}
+
+a {
+  color: var(--c-blue500);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+
+  &:visited { color: var(--c-blue500); }
+  &:hover { color: var(--c-blue700); }
+}
+
+.text-muted { color: var(--c-gray600); }
+.text-note {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--c-gray700);
+}
