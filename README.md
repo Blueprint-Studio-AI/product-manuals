@@ -4,11 +4,9 @@ Online product manuals for TokenWorks / IDscanner.com devices.
 
 ## For Yunyu
 
-**Your task:** Build the IDivisor 3 user manual as a web page.
+**Your task:** Build the IDVisor 3 user manual as a web page.
 
 **Linear ticket:** https://linear.app/blueprintstudio/issue/BPSTU-936/create-nice-idvisor-3-manual
-
-**Figma source:** https://www.figma.com/design/WQJPg8ye9uRmdJ7NZfKmi1/Product-Manuals?node-id=209-48
 
 ### Getting started
 
@@ -42,11 +40,11 @@ All in `src/components/`:
 | `ManualHeader` | Sticky frosted-glass header bar |
 | `ManualFooter` | Footer with revision info |
 
-Feel free to create new components as needed. Put them in `src/components/`.
+Feel free to create new components as needed or change these ones. Put them in `src/components/`.
 
 ### Style choices
 
-The color tokens and fonts are locked (see AI section below), but you have full creative freedom on layout, spacing, and visual design. You can choose any style direction you want for the manual.
+The color tokens and fonts are locked (see AI section below), but you have full creative freedom on layout, spacing, and visual design.
 
 ---
 
