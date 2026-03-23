@@ -19,8 +19,8 @@ defineProps<{
 
 <style scoped lang="scss">
 .card {
-  background-color: var(--c-gray100);
-  border: 1px solid var(--c-gray-border);
+  background-color: var(--p-gray-100);
+  border: 1px solid var(--p-gray-350);
   border-radius: 6px;
   overflow: hidden;
 
@@ -31,12 +31,12 @@ defineProps<{
   &__title {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--c-charcoal);
+    color: var(--p-gray-900);
   }
 
   &__subtitle {
     font-size: 0.8125rem;
-    color: var(--c-gray700);
+    color: var(--p-gray-700);
     margin-top: 0.25rem;
   }
 

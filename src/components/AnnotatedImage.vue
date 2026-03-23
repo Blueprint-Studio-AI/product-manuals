@@ -25,8 +25,8 @@ defineProps<{
   gap: 0.75rem;
 
   &__frame {
-    background-color: var(--c-gray100);
-    border: 1px solid var(--c-gray-border);
+    background-color: var(--p-gray-100);
+    border: 1px solid var(--p-gray-350);
     border-radius: 6px;
     padding: 1.5rem;
     display: flex;
@@ -43,7 +43,7 @@ defineProps<{
 
   &__caption {
     font-size: 0.75rem;
-    color: var(--c-gray600);
+    color: var(--p-gray-600);
     font-style: italic;
     text-align: center;
   }

@@ -14,9 +14,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem;
-  border-top: 1px solid var(--c-gray-border);
+  border-top: 1px solid var(--p-gray-350);
   font-size: 0.75rem;
-  color: var(--c-gray600);
+  color: var(--p-gray-600);
 
   strong {
     font-weight: 600;

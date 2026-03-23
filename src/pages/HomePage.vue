@@ -1,3 +1,9 @@
+<!--
+  ⚠️ REFERENCE ONLY — This is the AgeVisor 3 manual, kept as an example of a
+  completed product manual. It is NOT the active project. Do not modify this file
+  when building the IDivisor 3 manual. The IDivisor 3 manual lives at
+  src/pages/IDivisor3Page.vue and uses portal-aligned --p-* design tokens.
+-->
 <script setup lang="ts">
 import ManualHeader from '@/components/ManualHeader.vue'
 import ManualFooter from '@/components/ManualFooter.vue'
@@ -582,8 +588,8 @@ const tocData = [
 <style scoped lang="scss">
 // ===== COVER =====
 .cover {
-  background-color: var(--c-charcoal);
-  color: var(--c-frost);
+  background-color: var(--p-gray-900);
+  color: var(--p-surface-0);
   padding: 4rem 1.5rem 3rem;
   min-height: 80vh;
   display: flex;
@@ -601,7 +607,7 @@ const tocData = [
   &__title {
     font-size: clamp(2.5rem, 8vw, 4rem);
     font-weight: 600;
-    color: var(--c-frost);
+    color: var(--p-surface-0);
     letter-spacing: -0.02em;
     margin-bottom: -0.125rem;
   }
@@ -609,7 +615,7 @@ const tocData = [
   &__subtitle {
     font-size: clamp(1.25rem, 4vw, 2rem);
     font-weight: 600;
-    color: var(--c-frost);
+    color: var(--p-surface-0);
     opacity: 0.9;
   }
 
@@ -651,14 +657,14 @@ const tocData = [
 // ===== SECTION INTRO =====
 .section-intro {
   font-size: 0.9375rem;
-  color: var(--c-gray700);
+  color: var(--p-gray-700);
 }
 
 // ===== CARD TEXT =====
 .card-text {
   font-size: 0.875rem;
   line-height: 1.6;
-  color: var(--c-gray700);
+  color: var(--p-gray-700);
   margin-bottom: 0.75rem;
 
   &:last-child {
@@ -674,7 +680,7 @@ const tocData = [
   flex-direction: column;
   gap: 0.5rem;
   font-size: 0.875rem;
-  color: var(--c-gray700);
+  color: var(--p-gray-700);
   margin-bottom: 0.75rem;
 }
 
@@ -685,7 +691,7 @@ const tocData = [
   flex-direction: column;
   gap: 0.375rem;
   font-size: 0.875rem;
-  color: var(--c-gray700);
+  color: var(--p-gray-700);
   margin-bottom: 0.75rem;
 }
 
@@ -698,7 +704,7 @@ const tocData = [
   th, td {
     text-align: left;
     padding: 0.5rem 0.75rem;
-    border-bottom: 1px solid var(--c-gray-border);
+    border-bottom: 1px solid var(--p-gray-350);
   }
 
   th {
@@ -706,12 +712,12 @@ const tocData = [
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    color: var(--c-gray600);
-    background-color: var(--c-gray100);
+    color: var(--p-gray-600);
+    background-color: var(--p-gray-100);
   }
 
   td {
-    color: var(--c-gray700);
+    color: var(--p-gray-700);
   }
 
   tbody tr:last-child td {
@@ -722,7 +728,7 @@ const tocData = [
     .fear-letter {
       font-size: 1.5rem;
       font-weight: 700;
-      color: var(--c-green500);
+      color: var(--p-primary-500);
       width: 3rem;
       text-align: center;
       vertical-align: middle;
@@ -753,22 +759,22 @@ const tocData = [
   }
 
   &__desc {
-    color: var(--c-gray700);
+    color: var(--p-gray-700);
   }
 
   &--green {
-    background-color: var(--c-green-light);
-    border-left: 3px solid var(--c-green500);
+    background-color: var(--p-primary-50);
+    border-left: 3px solid var(--p-primary-500);
   }
 
   &--red {
-    background-color: var(--c-red-light);
-    border-left: 3px solid var(--c-red);
+    background-color: var(--p-red-100);
+    border-left: 3px solid var(--p-red-500);
   }
 
   &--gray {
-    background-color: var(--c-gray300);
-    border-left: 3px solid var(--c-gray400);
+    background-color: var(--p-gray-300);
+    border-left: 3px solid var(--p-gray-400);
   }
 }
 
@@ -792,7 +798,7 @@ const tocData = [
   font-size: 0.8125rem;
 
   p {
-    color: var(--c-gray700);
+    color: var(--p-gray-700);
     font-size: inherit;
   }
 }

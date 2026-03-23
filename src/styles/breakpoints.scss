@@ -1,0 +1,12 @@
+@use 'sass:map';
+
+$breakpoints: (
+  mobile: 640px,
+  tablet: 1024px,
+  desktop: 1200px,
+);
+
+// Helper function — usage: @media (max-width: #{bp(mobile)}) { ... }
+@function bp($name) {
+  @return map.get($breakpoints, $name);
+}

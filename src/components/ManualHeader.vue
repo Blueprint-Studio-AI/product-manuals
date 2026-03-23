@@ -29,7 +29,7 @@
   &__title {
     font-size: 0.75rem;
     font-weight: 600;
-    color: var(--c-charcoal);
+    color: var(--p-gray-900);
     letter-spacing: 0.02em;
   }
 
