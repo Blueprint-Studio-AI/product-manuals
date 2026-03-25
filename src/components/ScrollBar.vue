@@ -65,6 +65,12 @@ function onDrag(e: MouseEvent) {
   window.scrollTo({ top: dragStartScroll + scrollDelta })
 }
 
+function onMouseLeave() {
+  if (!dragging) {
+    hideTimer = setTimeout(() => { visible.value = false }, 600)
+  }
+}
+
 function onDragEnd() {
   dragging = false
   document.removeEventListener('mousemove', onDrag)
@@ -92,7 +98,7 @@ onUnmounted(() => {
     :class="{ 'scrollbar--visible': visible }"
     @mousedown="onTrackClick"
     @mouseenter="visible = true"
-    @mouseleave="() => { if (!dragging) { hideTimer = setTimeout(() => visible = false, 600) } }"
+    @mouseleave="onMouseLeave"
   >
     <div
       ref="thumb"
