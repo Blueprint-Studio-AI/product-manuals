@@ -1,4 +1,4 @@
-{% chapter number=4 %}
+{% chapter number=4 image="/images/chapter-04-settings.png" imageAlt="Settings" %}
 
 ## Settings
 

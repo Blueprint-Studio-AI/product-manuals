@@ -8,60 +8,41 @@ defineProps<{
 
 <template>
   <section class="chapter">
-    <div class="chapter__content">
-      <span v-if="number" class="chapter__number">{{ String(number).padStart(2, '0') }}</span>
-      <div class="chapter__text">
-        <slot />
-      </div>
-      <img
-        v-if="image"
-        :src="image"
-        :alt="imageAlt || 'Chapter image'"
-        class="chapter__image"
-      />
+    <div class="chapter__anchor">
+      <slot />
     </div>
+    <img
+      v-if="image"
+      :src="image"
+      :alt="imageAlt || 'Chapter image'"
+      class="chapter__image"
+    />
   </section>
 </template>
 
 <style scoped lang="scss">
 .chapter {
+  width: 100%;
   background-color: var(--c-charcoal);
-  color: var(--c-frost);
-  padding: 4rem 2rem;
-  min-height: 50vh;
   display: flex;
-  align-items: center;
   justify-content: center;
 
-  &__content {
-    max-width: 900px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1.5rem;
-  }
-
-  &__number {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: var(--c-gray400);
-  }
-
-  &__text {
-    :deep(h2) {
-      font-size: clamp(2rem, 6vw, 3rem);
-      font-weight: 300;
-      color: var(--c-frost);
-    }
+  &__anchor {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
   }
 
   &__image {
-    max-height: 400px;
-    width: auto;
-    object-fit: contain;
-    margin-top: 1rem;
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    display: block;
   }
 }
 </style>

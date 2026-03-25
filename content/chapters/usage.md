@@ -1,4 +1,4 @@
-{% chapter number=3 %}
+{% chapter number=3 image="/images/chapter-03-usage.png" imageAlt="Using the Scanner" %}
 
 ## Usage
 

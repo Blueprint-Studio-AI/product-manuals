@@ -25,7 +25,7 @@ function toggle(id: string) {
 }
 
 const NAV_HEIGHT = 56
-const SCROLL_PADDING = 24
+const SCROLL_PADDING = 0
 
 function scrollTo(id: string) {
   const el = document.getElementById(id)

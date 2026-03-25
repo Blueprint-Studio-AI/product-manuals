@@ -201,19 +201,16 @@ export default defineComponent({
   }
 }
 
-// Cover and chapter break out of padding, with dark bg extending edge-to-edge
+// Cover and chapter break out of padding, full viewport width
 .manual .cover,
 .manual .chapter {
   position: relative;
   margin-left: -2rem;
   margin-right: -2rem;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
+  width: calc(100% + 4rem);
+  margin-bottom: 0;
 
-.manual .cover {
-  margin-top: 0;
-
+  // Extend dark background edge-to-edge beyond container
   &::before {
     content: '';
     position: absolute;
@@ -224,5 +221,13 @@ export default defineComponent({
     background: var(--c-charcoal);
     z-index: -1;
   }
+}
+
+.manual .cover {
+  margin-top: 0;
+}
+
+.manual .chapter {
+  margin-top: 64px;
 }
 </style>

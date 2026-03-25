@@ -1,4 +1,4 @@
-{% chapter number=2 image="/images/idvisor3-hardware.png" imageAlt="IDVisor 3 front and back view" %}
+{% chapter number=2 image="/images/chapter-02-hardware.png" imageAlt="IDVisor 3 Hardware" %}
 
 ## Hardware
 
