@@ -19,3 +19,16 @@ Optional Add-ons/Upgrades include:
 - Charger Cradle
 - Extra Battery
 - 1-Year Extended Warranty
+
+### Document Overview
+
+This guide covers the following topics:
+
+- **Hardware** — Device overview, powering up, and physical features
+- **Usage** — Home screen, scanning IDs, taking pictures, tagging, searching, and more
+- **Settings** — Date/time, database management, configuration, tag lists, and Wi-Fi
+- **Find My Device** — Locating, locking, or erasing your scanner remotely
+- **Change PIN Code** — Changing the default device PIN
+- **Charging** — Charging instructions and battery care
+- **Barcode Detective** — Fake ID detection using hidden barcode data
+- **DMVCheck** — Verifying document authenticity against state DMV records

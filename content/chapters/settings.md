@@ -4,6 +4,8 @@
 
 {% /chapter %}
 
+The Setup menu contains functions typically used by a system administrator. These functions can be protected by pin codes to keep settings and information secure. The unit comes with a pre-initialized pin code (5678) for the following functions: Database, Configuration, and Tag List.
+
 ### a. Set Date/Time
 
 Set the date and time to ensure age calculation is correct. An incorrect date/time will result in incorrect age calculations. Always verify the correct date/time is displayed in the top right corner of the main scanning screen.
@@ -60,7 +62,7 @@ The Configuration screen controls age verification settings and scanner behavior
 - **Volume** — adjust alert volume
 
 {% callout type="note" %}
-If the IDVisor 3 is part of an IDVisor Sync network, some settings are centrally controlled by the IDVisor Sync software. Refer to IDVisor Sync documentation for details.
+If the IDVisor 3 is part of an IDVisor Sync network, highlighted settings will be locked. In a networked configuration, highlighted settings are centrally controlled by the IDVisor Sync software. Refer to IDVisor Sync documentation for details.
 {% /callout %}
 
 #### Advanced Settings
