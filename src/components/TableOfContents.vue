@@ -49,7 +49,7 @@ defineProps<{
 
   &__title {
     font-size: clamp(1.5rem, 4vw, 2.25rem);
-    font-weight: 600;
+    font-weight: 300;
     margin-bottom: 2rem;
   }
 
@@ -60,8 +60,8 @@ defineProps<{
   }
 
   &__section {
-    background-color: var(--p-gray-100);
-    border: 1px solid var(--p-gray-350);
+    background-color: var(--c-gray100);
+    border: 1px solid var(--c-gray-border);
     border-radius: 6px;
     overflow: hidden;
   }
@@ -71,13 +71,13 @@ defineProps<{
     padding: 0.875rem 1.25rem;
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--p-gray-900);
+    color: var(--c-charcoal);
     text-decoration: none;
-    border-bottom: 2px solid var(--p-gray-350);
+    border-bottom: 2px solid var(--c-gray-border);
     transition: background-color 0.15s;
 
     &:hover {
-      background-color: var(--p-gray-200);
+      background-color: var(--c-gray200);
     }
   }
 
@@ -91,7 +91,7 @@ defineProps<{
 
   &__entry {
     font-size: 0.875rem;
-    color: var(--p-gray-900);
+    color: var(--c-charcoal);
   }
 
   &__sublist {
@@ -105,7 +105,7 @@ defineProps<{
 
   &__subentry {
     font-size: 0.8125rem;
-    color: var(--p-gray-700);
+    color: var(--c-gray700);
   }
 
   &__link {
@@ -114,7 +114,7 @@ defineProps<{
     transition: color 0.15s;
 
     &:hover {
-      color: var(--p-primary-600);
+      color: var(--c-green600);
       text-decoration: underline;
     }
   }

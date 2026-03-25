@@ -1,5 +1,5 @@
 {
-  "name": "product-manuals",
+  "name": "agevisor-manual",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@markdoc/markdoc": "^0.5.6",
     "vue": "^3.5.30",
     "vue-router": "^5.0.3"
   },

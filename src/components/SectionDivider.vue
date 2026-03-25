@@ -25,8 +25,8 @@ defineProps<{
 
 <style scoped lang="scss">
 .divider {
-  background-color: var(--p-gray-900);
-  color: var(--p-surface-0);
+  background-color: var(--c-charcoal);
+  color: var(--c-frost);
   padding: 4rem 1.5rem;
   min-height: 50vh;
   display: flex;
@@ -45,12 +45,12 @@ defineProps<{
 
   &__heading {
     font-size: clamp(2rem, 6vw, 3.5rem);
-    font-weight: 600;
-    color: var(--p-surface-0);
+    font-weight: 300;
+    color: var(--c-frost);
   }
 
   &__number {
-    font-weight: 600;
+    font-weight: 300;
   }
 
   &__image {

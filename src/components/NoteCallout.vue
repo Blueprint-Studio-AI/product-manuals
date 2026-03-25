@@ -35,21 +35,21 @@ defineProps<{
   }
 
   &--note {
-    background-color: var(--p-blue-100);
-    border-left: 3px solid var(--p-blue-400);
-    color: var(--p-gray-900);
+    background-color: var(--c-blue-light);
+    border-left: 3px solid var(--c-blue-border);
+    color: var(--c-charcoal);
   }
 
   &--important {
-    background-color: var(--p-orange-100);
-    border-left: 3px solid var(--p-orange-500);
-    color: var(--p-gray-900);
+    background-color: var(--c-yellow-light);
+    border-left: 3px solid var(--c-yellow-border);
+    color: var(--c-charcoal);
   }
 
   &--warning {
-    background-color: var(--p-red-100);
-    border-left: 3px solid var(--p-red-500);
-    color: var(--p-gray-900);
+    background-color: var(--c-red-light);
+    border-left: 3px solid var(--c-red);
+    color: var(--c-charcoal);
   }
 }
 </style>
