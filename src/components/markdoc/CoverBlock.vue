@@ -19,7 +19,7 @@ defineProps<{
 <style scoped lang="scss">
 .cover {
   width: 100%;
-  background-color: var(--c-charcoal);
+  background-color: var(--c-frost);
   display: flex;
   justify-content: center;
 

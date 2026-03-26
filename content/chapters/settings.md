@@ -1,80 +1,77 @@
-{% chapter number=4 image="/images/chapter-04-settings.png" imageAlt="Settings" %}
-
-## Settings
-
+{% chapter id="settings" number=4 image="/images/chapter-04-settings.png" imageAlt="Settings" %}
 {% /chapter %}
 
-The Setup menu contains functions typically used by a system administrator. These functions can be protected by pin codes to keep settings and information secure. The unit comes with a pre-initialized pin code (5678) for the following functions: Database, Configuration, and Tag List.
+{% toc-entry title="Settings" level=1 /%}
 
-### a. Set Date/Time
+This section covers the Setup options available on the IDVisor 3. These settings can be accessed through the Setup menu on the device. 
 
-Set the date and time to ensure age calculation is correct. An incorrect date/time will result in incorrect age calculations. Always verify the correct date/time is displayed in the top right corner of the main scanning screen.
+## Set Date/Time
 
-### b. Database
+Set the correct date and time to ensure accurate age calculations. You can verify the current date and time in the top right corner of the main scanning screen.
 
-The Database menu provides tools for managing stored data.
+## Database
 
-#### Export Files
+The Database menu provides tools for managing stored data. Each tool is briefly explained below.
 
-Tap GO to export data to Phone Storage/Documents/IDVisorSmart as CSV files. Once exported, copy to a PC via USB and open with Excel or other spreadsheet software. You can also wirelessly send the file via Gmail after export.
+{% split image="/images/database-menu.png" imageAlt="Database Menu" side="right" %}
 
-#### Backup DB
+- **Export Files** — Tap 'GO' to export data as a CSV to Phone Storage/Documents/IDVisorSmart. You can send it wirelessly or transfer manually via USB.
+- **Backup DB** — Creates a database backup named with the date, time, and scan count.
+- **Restore DB** — Restore from a previous database backup.
+- **Check DB Stats** — View counts for customers, scans, photos, and tagged customers.
+- **Send Diagnostics** — Sends data to TokenWorks Support. Use only when directed by support.
+- **Delete Backups** — Remove old backup files.
+- **Delete Photos** — Remove photos from the database.
+- **Clear Scan Data** — Delete scans, customers, and/or tagged customers older than a specified number of days.
 
-Creates a backup copy of the database. Backup files are named with the creation date, time, and scan count.
+{% /split %}
 
-#### Restore DB
-
-Displays a list of database backups you can restore. Tap a file name to proceed with the restore.
-
-#### Check DB Stats
-
-Shows the number of customers, scans, photos, and tagged customers currently in the database.
-
-#### Send Diagnostics
-
-Sends data to TokenWorks Support. Only use when directed by TokenWorks support for a specific issue.
-
-#### Delete Backups
-
-Remove backups that are no longer needed.
-
-#### Delete Photos
-
-Remove photos from the database that are no longer needed.
-
-#### Clear Scan Data
-
-Remove scans, customers, and/or tagged customers older than a specified number of days. Enter the number of days, select the data types to delete, then tap Delete.
-
-### c. Configuration
+## Configuration
 
 The Configuration screen controls age verification settings and scanner behavior.
 
-- **Tag Check Enable** — enable/disable checking tags
-- **Anti Passback Enable** — enable/disable the Anti-Passback feature
-- **Anti Passback Time** — set the Anti-Passback time period
-- **Alcohol Age Check** — enable/disable primary age check
-- **Alcohol Age** — select the primary age threshold
-- **Tobacco Age Check** — enable/disable secondary age check
-- **Tobacco Age** — select the secondary age threshold
-- **Backlight Timer** — view/change backlight timer and display settings
-- **Do not save any data** — set to ON to prevent saving scanned data (may be required in some jurisdictions)
-- **Volume** — adjust alert volume
+{% split image="/images/configuration.png" imageAlt="Configuration" side="right" %}
+
+- **Tag Check Enable** — Enable or disable tag checking.
+- **Anti Passback Enable** — Enable or disable the Anti-Passback feature.
+- **Anti Passback Time** - Set the Anti-Passback time period.
+- **Alcohol Age Check** — Enable or disable the primary age verification.
+- **Alcohol Age** — Set the primary age threshold.
+- **Tobacco Age Check** — Enable or disable the secondary age verification.
+- **Tobacco Age** — Set the secondary age threshold.
+- **Backlight Timer** — Adjust the backlight timer and display settings.
+- **Do not save any data** — Enable if scanned data should not be stored *(may be required in some jurisdictions)*.
+- **Volume** — Adjust the device alert volume.
+
+{% /split %}
 
 {% callout type="note" %}
 If the IDVisor 3 is part of an IDVisor Sync network, highlighted settings will be locked. In a networked configuration, highlighted settings are centrally controlled by the IDVisor Sync software. Refer to IDVisor Sync documentation for details.
 {% /callout %}
 
-#### Advanced Settings
+### Advanced Settings
 
-- **Auto Deletion** — automatically delete data after a specific time period
-- **Auto Export** — automatically export scans and/or customers after a specific time period
-- **Change Pincode** — change the device PIN (default: 5678)
+- **Auto Deletion** — Automatically delete data after a specific time period.
+- **Auto Export** — Automatically export scans and/or customers after a specific time period.
 
-### d. Tag List
+![Advanced Settings](/images/configuration-advanced.png)
 
-View and manage the list of available tags. Press Add New to create custom tags. Use View Tag Cust. to see tagged customers, and Export Tagged Cust. to export tagged customer data as CSV.
+### Change Pincode
 
-### e. Wi-Fi
+{% split image="/images/change-pincode.png" imageAlt="Change Pincode" side="right" %}
+
+Change the device PIN (default: 5678). Enter your current pincode, then enter and confirm your new pincode. Press Save to apply the changes.
+
+{% /split %}
+
+## Tag List
+
+{% split image="/images/tag-list.png" imageAlt="Tag List" side="right" %}
+
+View and manage the list of available tags. Press **Add New** to create custom tags. Use **View Tag Cust.** to see tagged customers, and the **Export Tagged Cust.** to export tagged customer data as CSV.
+
+{% /split %}
+
+## Wi-Fi
 
 Access device Wi-Fi settings. Turn Wi-Fi on/off and connect to available networks. You can also access Wi-Fi settings by tapping the Wi-Fi icon at the top of any screen.

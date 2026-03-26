@@ -23,7 +23,7 @@ defineProps<{
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: start;
-  padding: 1.5rem 0;
+  padding: 0;
 
   &--image-left {
     .split__image {
@@ -69,6 +69,8 @@ defineProps<{
       height: auto;
       object-fit: contain;
       border-radius: 4px;
+      margin: 0;
+      padding: 0;
     }
   }
 

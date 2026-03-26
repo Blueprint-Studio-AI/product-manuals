@@ -12,6 +12,7 @@ import CoverBlock from '@/components/markdoc/CoverBlock.vue'
 import ChapterBlock from '@/components/markdoc/ChapterBlock.vue'
 import SplitBlock from '@/components/markdoc/SplitBlock.vue'
 import CalloutBlock from '@/components/markdoc/CalloutBlock.vue'
+import TocEntry from '@/components/markdoc/TocEntry.vue'
 import spine from '../../content/idvisor3.md?raw'
 import chHardware from '../../content/chapters/hardware.md?raw'
 import chUsage from '../../content/chapters/usage.md?raw'
@@ -24,6 +25,7 @@ const components = {
   Chapter: ChapterBlock,
   Split: SplitBlock,
   Callout: CalloutBlock,
+  TocEntry: TocEntry,
 }
 
 // Parse once
@@ -104,20 +106,46 @@ export default defineComponent({
   width: 100%;
   padding: 0 2rem 4rem;
 
-  // Constrain content blocks within a centered column
-  > article > *:not(.cover):not(.chapter) {
+  // Chapter content wrapper: 2-column grid system
+  .chapter-content {
     max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 3rem auto;
+    padding: 0 100px;
+
+    // 2-column grid: 56px left, remaining right
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 0;
+
+    // All direct children go to right column by default
+    > * {
+      grid-column: 2;
+    }
+
+    // h2 styling - shared by both section number and title
+    > h2,
+    > h2.section-number {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 400;
+      padding: 16px 0 1rem 0;
+      margin: 0 0 1rem 0;
+      border-bottom: 1px solid var(--c-gray200);
+    }
+
+    // Section number in left column
+    > h2.section-number {
+      grid-column: 1;
+    }
+
+    // Section title in right column
+    > h2:not(.section-number) {
+      grid-column: 2;
+    }
   }
 
+  // Heading styles
   h2 {
-    font-size: 1.75rem;
-    font-weight: 400;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--c-gray200);
     scroll-margin-top: 80px;
   }
 
@@ -126,6 +154,7 @@ export default defineComponent({
     font-weight: 600;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
+    padding: 8px 0;
     scroll-margin-top: 80px;
   }
 
@@ -145,12 +174,11 @@ export default defineComponent({
   }
 
   ul, ol {
-    padding-left: 0;
+    padding-left: 1.25rem;
     font-size: 0.9375rem;
     line-height: 1.7;
     color: var(--c-gray700);
     margin-bottom: 0.75rem;
-    list-style-position: inside;
 
     li {
       margin-bottom: 0.375rem;
@@ -158,11 +186,11 @@ export default defineComponent({
   }
 
   ul {
-    list-style: disc inside;
+    list-style: disc;
   }
 
   ol {
-    list-style: decimal inside;
+    list-style: decimal;
   }
 
   hr {
@@ -180,24 +208,40 @@ export default defineComponent({
     }
   }
 
-  // Desktop indentation hierarchy
-  @media (min-width: 769px) {
-    h2 { padding-left: 12px; }
-    h3 { padding-left: 24px; }
-    h4, h5, h6, p, hr, .split, .callout-wrap {
-      padding-left: 48px;
-    }
-    ul, ol { padding-left: 64px; }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 
-  // Tablet split the difference
-  @media (min-width: 769px) and (max-width: 1024px) {
-    h2 { padding-left: 6px; }
-    h3 { padding-left: 12px; }
-    h4, h5, h6, p, hr, .split, .callout-wrap {
-      padding-left: 24px;
+  // Mobile: single column layout
+  @media (max-width: 768px) {
+    .chapter-content {
+      padding: 0 1rem;
+      display: block;
+      margin: 2rem auto;
+
+      > h2 {
+        display: inline;
+        font-size: 1.5rem;
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      > h2.section-number {
+        margin-right: 0.5rem;
+      }
+
+      // Add border under the section title h2
+      > h2:not(.section-number)::after {
+        content: '';
+        display: block;
+        border-bottom: 1px solid var(--c-gray200);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+      }
     }
-    ul, ol { padding-left: 36px; }
   }
 }
 
@@ -205,29 +249,11 @@ export default defineComponent({
 .manual .cover,
 .manual .chapter {
   position: relative;
-  margin-left: -2rem;
-  margin-right: -2rem;
+  margin: 0 -2rem;
   width: calc(100% + 4rem);
-  margin-bottom: 0;
-
-  // Extend dark background edge-to-edge beyond container
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -100vw;
-    right: -100vw;
-    background: var(--c-charcoal);
-    z-index: -1;
-  }
-}
-
-.manual .cover {
-  margin-top: 0;
 }
 
 .manual .chapter {
-  margin-top: 64px;
+  margin-top: 4rem;
 }
 </style>

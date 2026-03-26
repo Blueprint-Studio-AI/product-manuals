@@ -1,5 +1,6 @@
 <script setup lang="ts">
 defineProps<{
+  id?: string
   number?: number
   image?: string
   imageAlt?: string
@@ -7,35 +8,42 @@ defineProps<{
 </script>
 
 <template>
-  <section class="chapter">
-    <div class="chapter__anchor">
-      <slot />
+  <section class="chapter" :id="id">
+    <div class="chapter__image-wrap">
+      <img
+        v-if="image"
+        :src="image"
+        :alt="imageAlt || 'Chapter image'"
+        class="chapter__image"
+      />
     </div>
-    <img
-      v-if="image"
-      :src="image"
-      :alt="imageAlt || 'Chapter image'"
-      class="chapter__image"
-    />
   </section>
+  <slot />
 </template>
 
 <style scoped lang="scss">
 .chapter {
   width: 100%;
-  background-color: var(--c-charcoal);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 
-  &__anchor {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+  &__image-wrap {
+    position: relative;
+    background-color: var(--c-charcoal);
+    display: flex;
+    justify-content: center;
+
+    // Extend dark background edge-to-edge
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -100vw;
+      right: -100vw;
+      background: var(--c-charcoal);
+      z-index: -1;
+    }
   }
 
   &__image {
@@ -44,5 +52,6 @@ defineProps<{
     height: auto;
     display: block;
   }
+
 }
 </style>

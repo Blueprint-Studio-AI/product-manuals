@@ -14,7 +14,7 @@ const emit = defineEmits<{
 <template>
   <nav class="navbar">
     <div class="navbar__left">
-      <img src="/logo/logo-idscanner-tokenworks.png" alt="IDscanner.com by TokenWorks" class="navbar__logo" />
+      <img src="/logo/Logo_Dark.png" alt="IDscanner.com by TokenWorks" class="navbar__logo" />
     </div>
     <span class="navbar__title">{{ title || 'User Manual' }}</span>
     <a href="https://www.idscanner.com/support" target="_blank" class="navbar__link">
@@ -43,8 +43,8 @@ const emit = defineEmits<{
   right: 0;
   z-index: 100;
   height: 56px;
-  background: var(--c-charcoal);
-  border-bottom: 1px solid var(--c-border-light);
+  background: var(--c-frost);
+  border-bottom: 1px solid var(--c-border-dark);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -66,7 +66,7 @@ const emit = defineEmits<{
     text-align: center;
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--c-text-on-dark);
+    color: var(--c-text-primary);
     letter-spacing: -0.02em;
   }
 
@@ -75,7 +75,7 @@ const emit = defineEmits<{
     text-align: right;
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--c-text-on-dark);
+    color: var(--c-text-primary);
     text-decoration: none;
     opacity: 0.8;
 
@@ -94,12 +94,12 @@ const emit = defineEmits<{
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--c-charcoal);
-  color: var(--c-text-on-dark);
+  background: var(--c-frost);
+  color: var(--c-text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: background 0.15s ease, transform 0.15s ease;
 
   svg {
@@ -109,7 +109,7 @@ const emit = defineEmits<{
   }
 
   &:hover {
-    background: var(--c-gray800);
+    background: var(--c-gray100);
     transform: scale(1.05);
   }
 }
