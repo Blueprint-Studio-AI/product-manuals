@@ -112,6 +112,10 @@ export default defineComponent({
   width: 100%;
   padding: 0 2rem 2rem;
 
+  @media (max-width: 1000px) {
+    padding: 0 1rem 1rem;
+  }
+
   // Chapter content wrapper: 2-column grid system
   .chapter-content {
     max-width: 900px;
@@ -248,15 +252,20 @@ export default defineComponent({
 
       > h2.section-number {
         margin-right: 0.5rem;
+        border-bottom: none !important;
       }
 
       // Add border under the section title h2
-      > h2:not(.section-number)::after {
-        content: '';
-        display: block;
-        border-bottom: 1px solid var(--c-gray200);
-        padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
+      > h2:not(.section-number) {
+        border-bottom: none !important;
+
+        &::after {
+          content: '';
+          display: block;
+          border-bottom: 1px solid var(--c-gray200);
+          margin-top: 0.5rem;
+          margin-bottom: 1rem;
+        }
       }
     }
   }

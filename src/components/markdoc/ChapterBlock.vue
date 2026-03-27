@@ -51,6 +51,7 @@ defineProps<{
     max-width: 1920px;
     height: auto;
     display: block;
+    margin: 0;
   }
 
 }
