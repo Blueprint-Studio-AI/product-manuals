@@ -5,6 +5,7 @@ import { tags } from '@/markdoc/schema'
 import { renderMarkdoc } from '@/markdoc/renderer'
 import { extractToc } from '@/markdoc/extract-toc'
 import { useScrollSpy } from '@/composables/useScrollSpy'
+import { initSearch } from '@/composables/useSearch'
 import NavBar from '@/components/NavBar.vue'
 import TocSidebar from '@/components/TocSidebar.vue'
 import ScrollBar from '@/components/ScrollBar.vue'
@@ -44,6 +45,9 @@ function flattenIds(entries: typeof tocEntries): string[] {
 
 const allIds = flattenIds(tocEntries)
 
+// Initialize search with raw markdown content
+initSearch(raw)
+
 export default defineComponent({
   name: 'HomePage',
   components: { NavBar, TocSidebar, ScrollBar },
@@ -60,7 +64,7 @@ export default defineComponent({
       const children = rendered ? (Array.isArray(rendered) ? rendered : [rendered]) : []
 
       return h('div', { class: ['layout', { 'layout--toc-open': tocOpen.value }] }, [
-        h(NavBar, { title: 'IDVisor 3 User Manual', tocOpen: tocOpen.value, onToggleToc: toggleToc }),
+        h(NavBar, { tocOpen: tocOpen.value, onToggleToc: toggleToc }),
         h(TocSidebar, { entries: tocEntries, activeId: activeId.value, open: tocOpen.value, onClose: toggleToc }),
         h('div', { class: 'manual-area' }, [
           h('main', { class: 'manual' }, children),
