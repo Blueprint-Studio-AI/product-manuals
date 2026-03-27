@@ -131,6 +131,12 @@ export function renderMarkdoc(
       attrs.id = slugify(text)
     }
 
+    // External links open in new tab
+    if (name === 'a' && attrs.href && /^https?:\/\//.test(attrs.href)) {
+      attrs.target = '_blank'
+      attrs.rel = 'noopener noreferrer'
+    }
+
     const renderedChildren = (children || [])
       .map((child) => renderMarkdoc(child, components))
       .flat()

@@ -11,7 +11,9 @@ The diagram below shows the key hardware features of the IDVisor 3.
 
 ## Power up
 
-Hold the power button for 2-3 seconds until the Green LED light at the top of the scanner illuminates. Wait 45-60 seconds for the scanner to boot.
+1. Hold the **power** button for 2-3 seconds until the Green LED light at the top of the scanner illuminates. 
+
+2. Wait 45-60 seconds for the scanner to boot.
 
 {% callout type="note" %}
 Do not switch off in normal use. Just plug the unit into a wall outlet at the end of the night. Only switch off when storing the unit.
@@ -21,7 +23,7 @@ Do not switch off in normal use. Just plug the unit into a wall outlet at the en
 
 {% split image="/images/idvisor3-charging.png" imageAlt="IDVisor 3 charging in cradle" side="right" %}
 
-1. Only use the supplied 5V USB power supply.
+1. Only use the supplied 5V USB power&nbsp;supply.
 2. It takes about 4 hours to fully charge.
 3. When device is charging, the LED indicates the charge status. Green = full. Red = charging.
 

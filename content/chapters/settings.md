@@ -15,12 +15,12 @@ The Database menu provides tools for managing stored data. Each tool is briefly 
 
 {% split image="/images/database-menu.png" imageAlt="Database Menu" side="right" %}
 
-- **Export Files** — Tap 'GO' to export data as a CSV to Phone Storage/Documents/IDVisorSmart. You can send it wirelessly or transfer manually via USB.
+- **Export Files** — Tap **GO** to export data as a CSV to Phone Storage / Documents / IDVisorSmart. You can send it wirelessly or transfer manually via USB.
 - **Backup DB** — Creates a database backup named with the date, time, and scan count.
 - **Restore DB** — Restore from a previous database backup.
-- **Check DB Stats** — View counts for customers, scans, photos, and tagged customers.
+- **Check DB Stats** — View counts for customers, scans, photos, and tagged&nbsp;customers.
 - **Send Diagnostics** — Sends data to TokenWorks Support. Use only when directed by support.
-- **Delete Backups** — Remove old backup files.
+- **Delete Backups** — Remove old backup&nbsp;files.
 - **Delete Photos** — Remove photos from the database.
 - **Clear Scan Data** — Delete scans, customers, and/or tagged customers older than a specified number of days.
 
@@ -36,12 +36,12 @@ The Configuration screen controls age verification settings and scanner behavior
 - **Anti Passback Enable** — Enable or disable the Anti-Passback feature.
 - **Anti Passback Time** - Set the Anti-Passback time period.
 - **Alcohol Age Check** — Enable or disable the primary age verification.
-- **Alcohol Age** — Set the primary age threshold.
+- **Alcohol Age** — Set the primary age&nbsp;threshold.
 - **Tobacco Age Check** — Enable or disable the secondary age verification.
-- **Tobacco Age** — Set the secondary age threshold.
+- **Tobacco Age** — Set the secondary age&nbsp;threshold.
 - **Backlight Timer** — Adjust the backlight timer and display settings.
 - **Do not save any data** — Enable if scanned data should not be stored *(may be required in some jurisdictions)*.
-- **Volume** — Adjust the device alert volume.
+- **Volume** — Adjust the device alert&nbsp;volume.
 
 {% /split %}
 
@@ -52,7 +52,7 @@ If the IDVisor 3 is part of an IDVisor Sync network, highlighted settings will b
 ### Advanced Settings
 
 - **Auto Deletion** — Automatically delete data after a specific time period.
-- **Auto Export** — Automatically export scans and/or customers after a specific time period.
+- **Auto Export** — Automatically export scans and/or customers after a specific time&nbsp;period.
 
 ![Advanced Settings](/images/configuration-advanced.png)
 
@@ -60,7 +60,7 @@ If the IDVisor 3 is part of an IDVisor Sync network, highlighted settings will b
 
 {% split image="/images/change-pincode.png" imageAlt="Change Pincode" side="right" %}
 
-Change the device PIN (default: 5678). Enter your current pincode, then enter and confirm your new pincode. Press Save to apply the changes.
+You can change the device PIN (default: 5678). Enter your current pincode, then enter and confirm your new pincode. Press **Save** to apply the changes.
 
 {% /split %}
 

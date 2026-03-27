@@ -15,9 +15,9 @@ To view photos on a PC, restart the device and connect it to a USB port, then na
 
 ## ID Scanner
 
-Tapping the ID Scanner button will launch the scanning form. 
+Tapping the **ID Scanner** button will launch the scanning form. 
 
-Below is an image of the ID Scanner form, which displays a scanned card, and all the elements  of the form. See the ID Scanner Functionality section for detailed operating&nbsp;instructions.
+Below is an image of the ID Scanner form, which displays a scanned card, and all the elements  of the form.
 
 ![ID Scanner](/images/id-scanner.png)
 
@@ -27,9 +27,9 @@ Below is an image of the ID Scanner form, which displays a scanned card, and all
 
 **When scanning an ID,**
 
-1. Aim the top of the device at an ID barcode
-2. Press the scan button, and hold steady
-3. See result
+1. Aim the top of the device at an ID&nbsp;barcode.
+2. Press the **scan** button, and hold steady.
+3. See result.
 
 {% /split %}
 
@@ -37,9 +37,9 @@ Below is an image of the ID Scanner form, which displays a scanned card, and all
 
 **When scanning an passport,**
 
-1. Aim the top of the device at the MRZ strip (the numbers at the bottom)
-2. Press the scan button, and hold steady
-3. See results (*This feature is not enabled on all devices. Upgrade your device to use passport scanning at portal.idscanner.com*)
+1. Aim the top of the device at the MRZ strip (the numbers at the bottom).
+2. Press the **scan** button, and hold steady.
+3. See results (*This feature is not enabled on all devices. Upgrade your device to use passport scanning at portal.idscanner.com*).
 
 {% /split %}
 
@@ -53,7 +53,7 @@ The scanner does not read 1D barcodes or magnetic stripes. The 2D barcode is the
 
 ### Taking Pictures of an ID
 
-If the Photos option is installed, once an ID is successfully scanned, you will now be able to  optionally take a picture of the scanned ID. The scanner software allows two pictures per ID  scanned, which allows you to take a picture of the front and back of an ID. There are two  camera icons on the ID Scanner form screen. Tapping one of those camera icons will allow  you to take a picture of one side of an ID.
+If the Photos option is installed, you can take up to two pictures per scanned ID — typically one of the front and one of the back. After a successful scan, tap either of the two camera icons on the scan results screen to capture a photo.
 
 {% callout type="note" %}
 Camera icons are only available after a successful scan and are not the same as the Free Pic option.
@@ -61,34 +61,36 @@ Camera icons are only available after a successful scan and are not the same as 
 
 ### Taking a Free Pic
 
-The Free Pic option allows you to take a picture of an ID that you are NOT able to read due  to the condition of the ID. Tap on the Free Pic button on the ID Scanner form screen, this will  initiate the camera and allow you to take a picture. 
+The Free Pic option allows you to photograph an ID that cannot be scanned due to its condition. Tap the **Free Pic** button on the scan screen to open the camera and capture the image.
 
 
-### Creating a Manual Entry
+### Creating & Editing a Manual Entry
 
-Manual Entry lets you enter the first name, last name, date of birth, and expiration date for an ID that cannot be read. Tap the Manual Entry button and fill in the fields.
-
-Once entered, you can use the Edit Manual Entry button to add DL#, sex, and address. Press Save when done.
+Manual Entry allows you enter the first name, last name, date of birth, and expiration date for an ID that cannot be read. Tap the Manual Entry button and fill in the fields.
 
 ![Creating a Manual Entry](/images/creating-manual-entry.png)
 
-### Editing a Manual Entry
-
 {% split image="/images/editing-manual-entry.png" imageAlt="Editing a Manual Entry" side="right" %}
 
-After creating a manual entry, you can edit it to add additional details. Tap the Edit Manual Entry button to modify fields including DL#, sex, and address. Press Save when done.
+After creating a manual entry, you can edit it to add additional details. Tap the **Edit Manual Entry** button to modify fields including DL#, sex, and address. Press Save when done.
 
 {% /split %}
 
 ### Tagging an ID
 
-Tag allows you to tag an ID at the time it is scanned. You can use the existing tag names pro vided on the scanner or create your own in the Tag List option under Setup. Scan an ID then  tap the Tag button. Select the Tag type from the pull-down menu. You may also enter an  optional note and optional Tag expiration date. After tagging the ID press Save. 
+Tags allow you to flag an ID at the time of scanning. To tag an ID, scan it, tap the **Tag** button, then select a tag type from the dropdown menu. You can also add an optional note and expiration date before pressing **Save**.
+
+Tag names can be customized in the Tag List option under Setup.
 
 ![Tagging an ID](/images/tagging-an-id.png)
 
 {% split image="/images/tagged-user.png" imageAlt="Tagged User" side="right" %}
 
-If a tagged ID is scanned again, the scanner alerts the operator with a sound and displays the tag details. To add a Tag to a previously scanned ID or to modify or delete an existing Tag for an ID, first  find that customer (see section 3.2 Scanned Data) and tap Tag. For adding or editing an existing Tag follow the instructions above. For deleting an existing Tag, tap Clear, then tap Save.
+If a tagged ID is scanned again, the scanner alerts the operator with a sound and displays the tag details. To add a Tag to a previously scanned ID or to modify or delete an existing Tag for an ID, first  find that customer and tap **Tag**. 
+
+For adding or editing an existing Tag follow the instructions above. 
+
+For deleting an existing Tag, tap **Clear**, then tap **Save**.
 
 {% /split %} 
 
@@ -96,7 +98,7 @@ If a tagged ID is scanned again, the scanner alerts the operator with a sound an
 
 {% split image="/images/adding-email-phone.png" imageAlt="Adding an Email or Phone Number" side="right" %}
 
-The Email/Tel button allows you to add an email and phone number to associate with the  scanned ID. Once an ID is scanned the Email/Tel button will be available. Tapping on this  button will open a form for entering the Email and/or Phone information. After entering an  Email and/or Telephone number press Save.
+The Email/Tel button allows you to associate an email address and phone number with a scanned ID. After scanning, tap the **Email/Tel** button, enter the information, and press **Save**.
 
 {% /split %}
 
@@ -104,24 +106,24 @@ The Email/Tel button allows you to add an email and phone number to associate wi
 
 {% split image="/images/search.png" imageAlt="Search" side="right" %}
 
-Tapping the Search button launches a form that lets you search for customers by DL#, Last Name, and/or First Name. Partial name searches are supported.
+Tapping the **Search** button launches a form that lets you search for customers by DL#, Last Name, and/or First Name. Partial name searches are supported.
 
-Once an ID has been found, you can view details of the customer record by tapping the More Info button. Tap the Tag and Email buttons to apply or modify Tags and append Email and/or Phone information.
+Once an ID has been found, you can view details of the customer record by tapping the **More Info** button. Tap the **Tag** and **Email** buttons to apply or modify Tags and append Email and/or Phone information.
 
 {% /split %}
 
 ## Help
 
-Tapping the Help button displays a menu for viewing short instructions that describe operations of the ID Scanner. Tap any of the 6 menu items to view the instructions for that operation.
+Tapping the **Help** button displays a menu for viewing short instructions that describe operations of the ID Scanner. Tap any of the 6 menu items to view the instructions for that operation.
 
 {% split image="/images/help-menu.png" imageAlt="Help Menu" side="right" %}
 
 The Help menu also provides access to:
 
 - **Check for Updates** — Checks for new software updates (requires Wi-Fi).
-- **Update Registration** — Update the user information associated with your scanner.
+- **Update Registration** — Update the user information associated with your&nbsp;scanner.
 - **About** — Displays the current version of the IDVisor 3 software and the device serial number.
-- **EULA** — Displays the End User License Agreement.
+- **EULA** — Displays the End User License&nbsp;Agreement.
 - **IDSentry EULA** — Displays the End User License Agreement for IDSentry.
 - **Purchase Features** — Generates a link to purchase upgrade features such as Passport Scanning, Pictures, Anti-Passback, and Tagging.
 - **Back** — Returns the application to the Home Screen.
@@ -132,17 +134,17 @@ The Help menu also provides access to:
 
 {% split image="/images/scanned-data.png" imageAlt="Scanned Data" side="right" %}
 
-Tapping the Scanned Data button displays a list of all scanned cards in chronological order.
+Tapping the **Scanned Data** button displays a list of all scanned cards in chronological&nbsp;order.
 
 {% /split %}
 
-Tapping the Stats button shows statistics of recent customer visits by gender, age, state, and cities during a selectable timeframe.
+Tapping the **Stats** button shows statistics of recent customer visits by gender, age, state, and cities during a selectable timeframe.
 
 ![Stats Button](/images/stats-button.png)
 
 {% split image="/images/individual-record.png" imageAlt="Individual Record" side="right" %}
 
-Tapping an individual record displays a detailed view of that customer record in a read-only form. From the individual record, use the Tag button to add or modify tags, the Email/Phone button to append contact information, and the Photo button to view any photos associated with the record.
+Tapping an individual record displays a detailed view of that customer record in a read-only form. From the individual record, use the **Tag** button to add or modify tags, the **Email/Phone** button to append contact information, and the **Photo** button to view any photos associated with the record.
 
 {% /split %}
 
@@ -150,7 +152,9 @@ Tapping an individual record displays a detailed view of that customer record in
 
 {% split image="/images/setup-menu.png" imageAlt="Set Up Menu" side="right" %}
 
-Tapping the Setup button will display a menu of functions that are typically used by a system  administrator. These functions can be protected by pin codes to keep settings and information  secure. The unit comes with a pre-initialized pin code (5678) for the following functions: Data base, Configuration, and Tag List. For further information and detailed instructions, please refer to the Settings section.
+Tapping the **Setup** button will display a menu of functions that are typically used by a system  administrator. These functions can be protected by pin codes to keep settings and information  secure. 
+
+The unit comes with a pre-initialized pin code (5678) for the following functions: Data base, Configuration, and Tag List. For further information and detailed instructions, please refer to the Settings&nbsp;Chapter.
 
 {% /split %} 
 
@@ -194,9 +198,9 @@ Select the DMVCheck Logo in the bottom left of the screen after scanning an ID. 
 Always cross check the data displayed on the scanner versus what is shown on the front of  the ID. Some fake IDs have a 'cloned' data stripe of someone who is ‘of age’.
 {% /callout %}
 
-![Cross Check IDs](/images/cross-check-id.png)
-
 1. *__FEEL FOR:__ Glue line or bumpy surfaces by the picture or birth date. Pin holes on the surface. Thickness of an ID. If it's been re-laminated, it may be thicker.*
 2. *__EXAMINE:__ The photo and physical description. They should match the person handing you the ID. The expiration date. You CANNOT accept an expired ID. The birth date. Do your math. Are they 21? Whether or not the ID is a duplicate. If it is, ask for another form of ID. The state logo. If it's partially missing or appears altered, the ID might be fake. The hologram. Is it a genuine hologram or a basic hologram added to a fake ID? The card's reverse side lettering. Some ID-makers neglect the back side of the ID. Look for blurred lettering or a cut out piece of paper. Whether it is an out-of-state license. Use an ID checking guide when you're looking at an unfamiliar license.*
 3. *__ASK:__ About basic information on the card, such as the birth date, middle initial, zip code, age, etc. For a second form of ID. People with fakes rarely carry back-up identification.*
 4. *__RETURN:__ If you are satisfied that the proof of age is valid, you may permit the individual to be served.*
+
+![Cross Check IDs](/images/cross-check-id.png)
