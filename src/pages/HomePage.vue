@@ -216,6 +216,17 @@ export default defineComponent({
     max-width: 100%;
     height: auto;
     display: block;
+    margin: 1.5rem 0;
+  }
+
+  // Ensure proper spacing between adjacent elements
+  .split + .split,
+  .split + p,
+  .split + img,
+  img + .split,
+  img + p,
+  p + img {
+    margin-top: 1.5rem;
   }
 
   // Mobile: single column layout

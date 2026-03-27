@@ -85,7 +85,10 @@ onUnmounted(() => {
 <template>
   <nav class="navbar">
     <div class="navbar__left">
-      <img src="/logo/Logo_Dark.png" alt="IDscanner.com by TokenWorks" class="navbar__logo" />
+      <a href="https://support.tokenworks.com/portal/en/kb/tokenworks" target="_blank" rel="noopener noreferrer" class="navbar__back">
+        <ArrowLeftIcon />
+        <span>Back to Support Portal</span>
+      </a>
     </div>
 
     <!-- Desktop Search Bar -->
@@ -211,9 +214,24 @@ onUnmounted(() => {
     align-items: center;
   }
 
-  &__logo {
-    height: 32px;
-    width: auto;
+  &__back {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--c-text-primary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.15s ease;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    &:hover {
+      color: var(--c-primary600);
+    }
   }
 
   &__right {
@@ -465,8 +483,16 @@ onUnmounted(() => {
   .navbar {
     padding: 0 1rem;
 
-    &__logo {
-      height: 26px;
+    &__back {
+      font-size: 0.8125rem;
+
+      span {
+        display: none;
+      }
+
+      &::after {
+        content: 'Back';
+      }
     }
 
     &__right {

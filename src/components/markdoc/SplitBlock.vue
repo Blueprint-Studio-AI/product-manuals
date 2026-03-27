@@ -24,6 +24,7 @@ defineProps<{
   gap: 2rem;
   align-items: start;
   padding: 0;
+  margin-bottom: 2rem;
 
   &--image-left {
     .split__image {

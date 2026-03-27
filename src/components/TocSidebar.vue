@@ -13,7 +13,8 @@ const emit = defineEmits<{
   close: []
 }>()
 
-const collapsed = ref<Set<string>>(new Set())
+// Initialize with Usage and Settings collapsed, Hardware open
+const collapsed = ref<Set<string>>(new Set(['usage', 'settings']))
 
 function toggle(id: string) {
   if (collapsed.value.has(id)) {
