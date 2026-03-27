@@ -19,6 +19,7 @@ export const cover: Schema = {
 export const chapter: Schema = {
   render: 'Chapter',
   attributes: {
+    id: { type: String },
     number: { type: Number },
     image: { type: String },
     imageAlt: { type: String },
@@ -56,4 +57,18 @@ export const callout: Schema = {
   },
 }
 
-export const tags = { cover, chapter, split, callout }
+// TOC-only entry - appears in table of contents but not rendered in content
+export const tocEntry: Schema = {
+  render: 'TocEntry',
+  selfClosing: true,
+  attributes: {
+    title: { type: String, required: true },
+    level: { type: Number, default: 2 },
+  },
+  transform(node, config) {
+    const attrs = node.transformAttributes(config)
+    return new Tag('TocEntry', attrs, [])
+  },
+}
+
+export const tags = { cover, chapter, split, callout, 'toc-entry': tocEntry }

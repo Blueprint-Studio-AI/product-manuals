@@ -1,5 +1,6 @@
 <script setup lang="ts">
 defineProps<{
+  id?: string
   number?: number
   image?: string
   imageAlt?: string
@@ -7,12 +8,8 @@ defineProps<{
 </script>
 
 <template>
-  <section class="chapter">
-    <div class="chapter__content">
-      <span v-if="number" class="chapter__number">{{ String(number).padStart(2, '0') }}</span>
-      <div class="chapter__text">
-        <slot />
-      </div>
+  <section class="chapter" :id="id">
+    <div class="chapter__image-wrap">
       <img
         v-if="image"
         :src="image"
@@ -21,47 +18,40 @@ defineProps<{
       />
     </div>
   </section>
+  <slot />
 </template>
 
 <style scoped lang="scss">
 .chapter {
-  background-color: var(--c-charcoal);
-  color: var(--c-frost);
-  padding: 4rem 2rem;
-  min-height: 50vh;
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
 
-  &__content {
-    max-width: 900px;
-    width: 100%;
+  &__image-wrap {
+    position: relative;
+    background-color: var(--c-charcoal);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1.5rem;
-  }
+    justify-content: center;
 
-  &__number {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: var(--c-gray400);
-  }
-
-  &__text {
-    :deep(h2) {
-      font-size: clamp(2rem, 6vw, 3rem);
-      font-weight: 300;
-      color: var(--c-frost);
+    // Extend dark background edge-to-edge
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -100vw;
+      right: -100vw;
+      background: var(--c-charcoal);
+      z-index: -1;
     }
   }
 
   &__image {
-    max-height: 400px;
-    width: auto;
-    object-fit: contain;
-    margin-top: 1rem;
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    display: block;
   }
+
 }
 </style>

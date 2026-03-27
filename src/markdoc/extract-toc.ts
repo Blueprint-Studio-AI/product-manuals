@@ -27,6 +27,7 @@ export function extractToc(ast: Node): TocEntry[] {
   const flat: { id: string; title: string; level: number }[] = []
 
   function walk(node: Node) {
+    // Handle regular headings
     if (node.type === 'heading') {
       const level = node.attributes?.level as number
       if (level <= 3) {
@@ -36,6 +37,16 @@ export function extractToc(ast: Node): TocEntry[] {
         }
       }
     }
+
+    // Handle toc-entry tags (TOC-only entries)
+    if (node.type === 'tag' && node.tag === 'toc-entry') {
+      const title = node.attributes?.title as string
+      const level = (node.attributes?.level as number) || 2
+      if (title) {
+        flat.push({ id: slugify(title), title, level })
+      }
+    }
+
     for (const child of node.children || []) {
       walk(child)
     }
@@ -43,25 +54,28 @@ export function extractToc(ast: Node): TocEntry[] {
 
   walk(ast)
 
-  // Build nested structure: h2 contains h3s, h3 contains h4s, etc.
+  // Build nested structure: only level 1 items can have children
+  // h2 and h3 are flattened as direct children of level 1 items
   const root: TocEntry[] = []
-  const stack: TocEntry[] = []
+  let currentLevel1: TocEntry | null = null
 
   for (const item of flat) {
     const entry: TocEntry = { ...item, children: [] }
 
-    // Pop stack until we find a parent with lower level
-    while (stack.length > 0 && stack[stack.length - 1].level >= item.level) {
-      stack.pop()
-    }
-
-    if (stack.length === 0) {
+    if (item.level === 1) {
+      // Level 1 items go to root and can have children
       root.push(entry)
+      currentLevel1 = entry
     } else {
-      stack[stack.length - 1].children.push(entry)
+      // Level 2 and 3 items are direct children of the current level 1 item
+      // They don't have nested children (flattened)
+      if (currentLevel1) {
+        currentLevel1.children.push(entry)
+      } else {
+        // No level 1 parent yet, add to root
+        root.push(entry)
+      }
     }
-
-    stack.push(entry)
   }
 
   return root

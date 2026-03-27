@@ -13,7 +13,8 @@ const emit = defineEmits<{
   close: []
 }>()
 
-const collapsed = ref<Set<string>>(new Set())
+// Initialize with Usage and Settings collapsed, Hardware open
+const collapsed = ref<Set<string>>(new Set(['usage', 'settings']))
 
 function toggle(id: string) {
   if (collapsed.value.has(id)) {
@@ -25,20 +26,30 @@ function toggle(id: string) {
 }
 
 const NAV_HEIGHT = 56
-const SCROLL_PADDING = 24
+const SCROLL_PADDING = 0
 
 function scrollTo(id: string) {
   const el = document.getElementById(id)
   if (!el) return
 
   // Close TOC on mobile first so scroll lock is removed before scrolling
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 1000) {
     emit('close')
   }
 
-  // Use requestAnimationFrame so the DOM updates (scroll lock removed) before scrolling
+  // Find scroll target: check for parent .chapter/.cover, or preceding sibling .chapter
+  let target: Element = el
   const parent = el.closest('.chapter, .cover')
-  const target = parent || el
+  if (parent) {
+    target = parent
+  } else {
+    // Check if previous sibling is a .chapter (for chapter headings rendered outside the section)
+    const prevSibling = el.previousElementSibling
+    if (prevSibling?.classList.contains('chapter')) {
+      target = prevSibling
+    }
+  }
+
   const top = target.getBoundingClientRect().top + window.scrollY - NAV_HEIGHT - SCROLL_PADDING
 
   requestAnimationFrame(() => {
@@ -94,45 +105,15 @@ function scrollTo(id: string) {
             class="toc__item"
           >
             <div class="toc__row" :class="{ 'toc__row--active': activeId === child.id }" @click="scrollTo(child.id)">
-              <button
-                v-if="child.children.length"
-                class="toc__toggle toc__toggle--nested"
-                :class="{ 'toc__toggle--collapsed': collapsed.has(child.id) }"
-                @click.stop="toggle(child.id)"
-              >
-                <svg width="12" height="12" viewBox="0 0 12 12">
-                  <path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </button>
-              <span v-else class="toc__toggle-spacer" />
+              <span class="toc__toggle-spacer" />
               <a
                 class="toc__link toc__link--sub"
-                :class="{ 'toc__link--active': activeId === child.id }"
+                :class="{ 'toc__link--active': activeId === child.id, 'toc__link--h3': child.level === 3 }"
               >
                 {{ child.title }}
               </a>
             </div>
 
-            <ul
-              v-if="child.children.length && !collapsed.has(child.id)"
-              class="toc__children"
-            >
-              <li
-                v-for="sub in child.children"
-                :key="sub.id"
-                class="toc__item"
-              >
-                <div class="toc__row" :class="{ 'toc__row--active': activeId === sub.id }" @click="scrollTo(sub.id)">
-                  <span class="toc__toggle-spacer" />
-                  <a
-                    class="toc__link toc__link--subsub"
-                    :class="{ 'toc__link--active': activeId === sub.id }"
-                  >
-                    {{ sub.title }}
-                  </a>
-                </div>
-              </li>
-            </ul>
           </li>
         </ul>
       </li>
@@ -150,8 +131,8 @@ function scrollTo(id: string) {
   overflow-y: auto;
   scrollbar-width: none;
   &::-webkit-scrollbar { display: none; }
-  background: var(--c-charcoal);
-  border-right: 1px solid var(--c-border-light);
+  background: var(--c-frost);
+  border-right: 1px solid var(--c-border-dark);
   padding: 1.25rem 0;
   z-index: 50;
   transform: translateX(-100%);
@@ -171,12 +152,12 @@ function scrollTo(id: string) {
   &__label {
     font-size: 0.8125rem;
     font-weight: 500;
-    color: var(--c-text-on-dark);
+    color: var(--c-text-primary);
     letter-spacing: -0.02em;
   }
 
   &__close {
-    color: var(--c-text-on-dark);
+    color: var(--c-text-primary);
     opacity: 0.5;
     display: flex;
     align-items: center;
@@ -216,16 +197,16 @@ function scrollTo(id: string) {
     cursor: pointer;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.05);
+      background-color: rgba(0, 0, 0, 0.03);
 
       .toc__link {
-        color: var(--c-primary400);
+        color: var(--c-primary700);
       }
     }
 
     &--active {
-      border-left-color: var(--c-primary500);
-      background-color: rgba(74, 224, 167, 0.08);
+      border-left-color: var(--c-primary600);
+      background-color: rgba(74, 224, 167, 0.12);
     }
   }
 
@@ -249,7 +230,7 @@ function scrollTo(id: string) {
     }
 
     &:hover {
-      color: var(--c-text-on-dark);
+      color: var(--c-text-primary);
     }
   }
 
@@ -261,7 +242,7 @@ function scrollTo(id: string) {
   &__link {
     font-size: 0.8125rem;
     font-weight: 500;
-    color: var(--c-text-on-dark);
+    color: var(--c-text-primary);
     text-decoration: none;
     cursor: pointer;
     line-height: 1.4;
@@ -270,7 +251,7 @@ function scrollTo(id: string) {
     transition: color 0.15s ease;
 
     &--active {
-      color: var(--c-primary400);
+      color: var(--c-primary700);
     }
 
     &--sub {
@@ -283,20 +264,12 @@ function scrollTo(id: string) {
       }
     }
 
-    &--subsub {
-      font-size: 0.75rem;
-      font-weight: 300;
-      opacity: 0.7;
-      padding-left: 0.5rem;
-
-      &.toc__link--active {
-        opacity: 1;
-        color: var(--c-primary400);
-      }
+    &--h3 {
+      padding-left: 16px;
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     width: 220px;
   }
 }
@@ -305,7 +278,7 @@ function scrollTo(id: string) {
 .toc-backdrop {
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     display: block;
     position: fixed;
     inset: 56px 0 0 0;

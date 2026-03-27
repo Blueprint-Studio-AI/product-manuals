@@ -27,8 +27,8 @@ const labels: Record<string, string> = {
 }
 
 .callout {
-  padding: 0.75rem 1rem;
-  border-radius: 4px;
+  padding: 0.75rem;
+  border-radius: 0;
   font-size: 0.875rem;
   line-height: 1.6;
 
