@@ -9,6 +9,7 @@ import { initSearch } from '@/composables/useSearch'
 import NavBar from '@/components/NavBar.vue'
 import TocSidebar from '@/components/TocSidebar.vue'
 import ScrollBar from '@/components/ScrollBar.vue'
+import Footer from '@/components/Footer.vue'
 import CoverBlock from '@/components/markdoc/CoverBlock.vue'
 import ChapterBlock from '@/components/markdoc/ChapterBlock.vue'
 import SplitBlock from '@/components/markdoc/SplitBlock.vue'
@@ -50,7 +51,7 @@ initSearch(raw)
 
 export default defineComponent({
   name: 'HomePage',
-  components: { NavBar, TocSidebar, ScrollBar },
+  components: { NavBar, TocSidebar, ScrollBar, Footer },
   setup() {
     const { activeId } = useScrollSpy(allIds)
     const tocOpen = ref(window.innerWidth > 1000)
@@ -69,6 +70,7 @@ export default defineComponent({
         h('div', { class: 'manual-area' }, [
           h('main', { class: 'manual' }, children),
         ]),
+        h(Footer),
         h(ScrollBar),
       ])
     }
@@ -108,7 +110,7 @@ export default defineComponent({
 .manual {
   max-width: 100%;
   width: 100%;
-  padding: 0 2rem 4rem;
+  padding: 0 2rem 6rem; // Extra bottom padding for fixed footer
 
   // Chapter content wrapper: 2-column grid system
   .chapter-content {
@@ -271,4 +273,5 @@ export default defineComponent({
 .manual .chapter {
   margin-top: 4rem;
 }
+
 </style>
