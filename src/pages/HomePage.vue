@@ -69,8 +69,8 @@ export default defineComponent({
         h(TocSidebar, { entries: tocEntries, activeId: activeId.value, open: tocOpen.value, onClose: toggleToc }),
         h('div', { class: 'manual-area' }, [
           h('main', { class: 'manual' }, children),
+          h(Footer),
         ]),
-        h(Footer),
         h(ScrollBar),
       ])
     }
@@ -110,7 +110,7 @@ export default defineComponent({
 .manual {
   max-width: 100%;
   width: 100%;
-  padding: 0 2rem 6rem; // Extra bottom padding for fixed footer
+  padding: 0 2rem 2rem;
 
   // Chapter content wrapper: 2-column grid system
   .chapter-content {
