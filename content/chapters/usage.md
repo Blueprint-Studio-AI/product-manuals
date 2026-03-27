@@ -28,7 +28,7 @@ Below is an image of the ID Scanner form, which displays a scanned card, and all
 **When scanning an ID,**
 
 1. Aim the top of the device at an ID&nbsp;barcode.
-2. Press the **scan** button, and hold steady.
+2. Press the **scan** button, and hold&nbsp;steady.
 3. See result.
 
 {% /split %}
@@ -38,7 +38,7 @@ Below is an image of the ID Scanner form, which displays a scanned card, and all
 **When scanning an passport,**
 
 1. Aim the top of the device at the MRZ strip (the numbers at the bottom).
-2. Press the **scan** button, and hold steady.
+2. Press the **scan** button, and hold&nbsp;steady.
 3. See results (*This feature is not enabled on all devices. Upgrade your device to use passport scanning at portal.idscanner.com*).
 
 {% /split %}
