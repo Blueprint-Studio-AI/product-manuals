@@ -8,8 +8,6 @@
 
 <style lang="scss">
 .footer {
-  max-width: 900px;
-  margin: 0 auto;
   padding: 0 100px;
 
   @media (max-width: 1000px) {
