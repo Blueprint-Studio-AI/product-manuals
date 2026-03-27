@@ -32,7 +32,7 @@ function scrollTo(id: string) {
   if (!el) return
 
   // Close TOC on mobile first so scroll lock is removed before scrolling
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 1000) {
     emit('close')
   }
 
@@ -268,7 +268,7 @@ function scrollTo(id: string) {
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     width: 220px;
   }
 }
@@ -277,7 +277,7 @@ function scrollTo(id: string) {
 .toc-backdrop {
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     display: block;
     position: fixed;
     inset: 56px 0 0 0;

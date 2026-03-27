@@ -49,7 +49,7 @@ export default defineComponent({
   components: { NavBar, TocSidebar, ScrollBar },
   setup() {
     const { activeId } = useScrollSpy(allIds)
-    const tocOpen = ref(window.innerWidth > 768)
+    const tocOpen = ref(window.innerWidth > 1000)
 
     function toggleToc() {
       tocOpen.value = !tocOpen.value
@@ -80,14 +80,14 @@ export default defineComponent({
       margin-left: 275px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
       .manual-area {
         margin-left: 0;
       }
     }
 
     // Lock body scroll on mobile when TOC is open
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
       overflow: hidden;
       height: 100vh;
     }
@@ -215,7 +215,7 @@ export default defineComponent({
   }
 
   // Mobile: single column layout
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     .chapter-content {
       padding: 0 1rem;
       display: block;

@@ -57,7 +57,7 @@ const emit = defineEmits<{
   }
 
   &__logo {
-    height: 24px;
+    height: 32px;
     width: auto;
   }
 
@@ -126,12 +126,12 @@ const emit = defineEmits<{
   transform: scale(0.8);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .navbar {
     padding: 0 1rem;
 
     &__logo {
-      height: 20px;
+      height: 26px;
     }
 
     &__title {
