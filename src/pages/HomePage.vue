@@ -122,10 +122,10 @@ export default defineComponent({
     margin: 3rem auto;
     padding: 0 100px;
 
-    // 2-column grid: 56px left, remaining right
+    // 2-column grid: fixed left for numbers (right-aligned), remaining right
     display: grid;
     grid-template-columns: 56px 1fr;
-    gap: 0;
+    column-gap: 0.5rem;
 
     // All direct children go to right column by default
     > * {
@@ -143,9 +143,10 @@ export default defineComponent({
       border-bottom: 1px solid var(--c-gray200);
     }
 
-    // Section number in left column
+    // Section number in left column (right-aligned for consistent spacing)
     > h2.section-number {
       grid-column: 1;
+      text-align: right;
     }
 
     // Section title in right column
