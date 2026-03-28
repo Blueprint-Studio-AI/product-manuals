@@ -9,15 +9,9 @@ The Home screen is the launch point for all functionality. The buttons take you 
 
 ![Home Screen](/images/home-screen.png)
 
-{% callout type="note" %}
-To view photos on a PC, restart the device and connect it to a USB port, then navigate to Storage/Documents/IDVisorSmartPics. Scanned ID photos are organized by name and date/time. Free Pic photos are stored in a separate folder, shown from latest to oldest.
-{% /callout %}
+## ID Scanner - Scan Screen
 
-## ID Scanner
-
-Tapping the **ID Scanner** button will launch the scanning form. 
-
-Below is an image of the ID Scanner form, which displays a scanned card, and all the elements  of the form.
+Tapping the **ID Scanner** button will launch the main scanning screen.
 
 ![ID Scanner](/images/id-scanner.png)
 
@@ -25,21 +19,23 @@ Below is an image of the ID Scanner form, which displays a scanned card, and all
 
 {% split image="/images/scanning-an-id.png" imageAlt="Scanning an ID" side="right" %}
 
-**When scanning an ID,**
+**When scanning an ID**
 
 1. Aim the top of the device at an ID&nbsp;barcode.
 2. Press the **scan** button, and hold&nbsp;steady.
-3. See result.
+3. See results.
 
 {% /split %}
 
 {% split image="/images/scanning-passports.png" imageAlt="Scanning Passports" side="right" %}
 
-**When scanning an passport,**
+**When scanning a passport**
+
+This feature is not enabled on all devices. Upgrade your device to use passport scanning at [portal.idscanner.com](https://portal.idscanner.com).
 
 1. Aim the top of the device at the MRZ strip (the numbers at the bottom).
 2. Press the **scan** button, and hold&nbsp;steady.
-3. See results (*This feature is not enabled on all devices. Upgrade your device to use passport scanning at portal.idscanner.com*).
+3. See results.
 
 {% /split %}
 
@@ -53,16 +49,21 @@ The scanner does not read 1D barcodes or magnetic stripes. The 2D barcode is the
 
 ### Taking Pictures of an ID
 
-If the Photos option is installed, you can take up to two pictures per scanned ID — typically one of the front and one of the back. After a successful scan, tap either of the two camera icons on the scan results screen to capture a photo.
+#### Photo Capture
+
+If the Photo Capture is installed, you can take up to two pictures per scanned ID — typically one of the front and one of the back. After a successful scan, tap either of the two camera icons on the scan results screen to capture a photo.
 
 {% callout type="note" %}
-Camera icons are only available after a successful scan and are not the same as the Free Pic option.
+The camera icons will only show after a successful scan, and are not the same as the Free Pic option.
 {% /callout %}
 
-### Taking a Free Pic
+#### Taking a Free Pic
 
 The Free Pic option allows you to photograph an ID that cannot be scanned due to its condition. Tap the **Free Pic** button on the scan screen to open the camera and capture the image.
 
+{% callout type="note" %}
+To view photos on a PC, restart the device and connect it to a USB port, then navigate to Storage/Documents/IDVisorSmartPics. Scanned ID photos are organized by name and date/time. Free Pic photos are stored in a separate folder, shown from latest to oldest.
+{% /callout %}
 
 ### Creating & Editing a Manual Entry
 
@@ -86,7 +87,9 @@ Tag names can be customized in the Tag List option under Setup.
 
 {% split image="/images/tagged-user.png" imageAlt="Tagged User" side="right" %}
 
-If a tagged ID is scanned again, the scanner alerts the operator with a sound and displays the tag details. To add a Tag to a previously scanned ID or to modify or delete an existing Tag for an ID, first  find that customer and tap **Tag**. 
+If a tagged ID is scanned again, the scanner alerts the operator with a sound and displays the tag details.
+
+To add a Tag to a previously scanned ID or to modify or delete an existing Tag for an ID, first [find that customer](#search) and tap **Tag**.
 
 For adding or editing an existing Tag follow the instructions above. 
 
@@ -154,7 +157,7 @@ Tapping an individual record displays a detailed view of that customer record in
 
 Tapping the **Setup** button will display a menu of functions that are typically used by a system  administrator. These functions can be protected by pin codes to keep settings and information  secure. 
 
-The unit comes with a pre-initialized pin code (5678) for the following functions: Data base, Configuration, and Tag List. For further information and detailed instructions, please refer to the Settings&nbsp;Chapter.
+The unit comes with a pre-initialized pin code (5678) for the following functions: Data base, Configuration, and Tag List. For further information and detailed instructions, please refer to the [Settings&nbsp;Chapter](#settings).
 
 {% /split %} 
 
@@ -198,9 +201,30 @@ Select the DMVCheck Logo in the bottom left of the screen after scanning an ID. 
 Always cross check the data displayed on the scanner versus what is shown on the front of  the ID. Some fake IDs have a 'cloned' data stripe of someone who is ‘of age’.
 {% /callout %}
 
-1. *__FEEL FOR:__ Glue line or bumpy surfaces by the picture or birth date. Pin holes on the surface. Thickness of an ID. If it's been re-laminated, it may be thicker.*
-2. *__EXAMINE:__ The photo and physical description. They should match the person handing you the ID. The expiration date. You CANNOT accept an expired ID. The birth date. Do your math. Are they 21? Whether or not the ID is a duplicate. If it is, ask for another form of ID. The state logo. If it's partially missing or appears altered, the ID might be fake. The hologram. Is it a genuine hologram or a basic hologram added to a fake ID? The card's reverse side lettering. Some ID-makers neglect the back side of the ID. Look for blurred lettering or a cut out piece of paper. Whether it is an out-of-state license. Use an ID checking guide when you're looking at an unfamiliar license.*
-3. *__ASK:__ About basic information on the card, such as the birth date, middle initial, zip code, age, etc. For a second form of ID. People with fakes rarely carry back-up identification.*
-4. *__RETURN:__ If you are satisfied that the proof of age is valid, you may permit the individual to be served.*
-
 ![Cross Check IDs](/images/cross-check-id.png)
+
+## The FEAR Method of Carding
+
+Fake ID Detection tools cannot guarantee 100% ID authenticity. The following strategies can be used to further test for fake IDs:
+
+#### Feel for
+- Glue line or bumpy surfaces by the picture or birth date.
+- Pin holes on the surface.
+- Thickness of an ID. If it's been re-laminated, it may be thicker.
+
+#### Examine
+- The photo and physical description. They should match the person handing you the ID.
+- The expiration date. You CANNOT accept an expired ID.
+- The birth date. Do your math. Are they 21?
+- Whether or not the ID is a duplicate. If it is, ask for another form of ID.
+- The state logo. If it's partially missing or appears altered, the ID might be fake.
+- The hologram. Is it a genuine hologram or a basic hologram added to a fake ID?
+- The card's reverse side lettering. Some ID-makers neglect the back side of the ID. Look for blurred lettering or a cut out piece of paper.
+- Whether it is an out-of-state license. Use an ID checking guide when you're looking at an unfamiliar license.
+
+#### Ask
+- Ask about basic information on the card, such as the birth date, middle initial, zip code, age, etc.
+- Ask for a second form of ID. Students are often instructed to order fake IDs with their real name and address, but with a different date of birth. Ask for second form of ID which has Date of Birth.
+
+#### Return
+- If you are satisfied that the proof of age is valid, you may permit the individual to be served.

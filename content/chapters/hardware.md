@@ -23,9 +23,9 @@ Do not switch off in normal use. Just plug the unit into a wall outlet at the en
 
 {% split image="/images/idvisor3-charging.png" imageAlt="IDVisor 3 charging in cradle" side="right" %}
 
-1. Only use the supplied 5V USB power&nbsp;supply.
-2. It takes about 4 hours to fully charge.
-3. When device is charging, the LED indicates the charge status. Green = full. Red = charging.
+- Only use the supplied 5V USB power&nbsp;supply.
+- It takes about 4 hours to fully charge.
+- When device is charging, the LED indicates the charge status. Green = full. Red = charging.
 
 {% /split %}
 
@@ -39,7 +39,7 @@ Leave unit charging when not in use. Batteries will not be overcharged and unit 
 
 Google's 'Find My Device' feature is a great way to find, lock, or erase all data if you misplace the scanner and want to keep its contents from the wrong hands.
 
-To install Google's Find My Device on your IDVisor 3, visit the setup instructions at [support.tokenworks.com](https://support.tokenworks.com/portal/en/kb/articles/how-to-install-google).
+To install Google's Find My Device on your IDVisor 3, view the setup guide by [clicking here](https://support.tokenworks.com/portal/en/kb/articles/how-to-install-google).
 
 {% /split %}
 
@@ -49,6 +49,6 @@ Save the Google account and PIN used on your ID Scanner. Losing this information
 
 ## Change PIN Code
 
-The unit comes with a pre-initialized pin code (5678) for the following functions: Database, Configuration, Tag List, and Close Application. You can change the PIN from the default by navigating to Setup > Configuration > Advanced > Change Pincode.
+The unit comes with a pre-initialized pin code (5678) for the following functions: Database, Configuration, Tag List, and Close Application. You can change the PIN from the default by navigating to **Setup > Configuration > Advanced > Change Pincode**.
 
 Enter the current pin code, then the new pin code, and confirm by re-entering the new pin code. Press Save when done.

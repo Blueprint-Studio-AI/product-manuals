@@ -3,8 +3,6 @@
 
 {% toc-entry title="Settings" level=1 /%}
 
-This section covers the Setup options available on the IDVisor 3. These settings can be accessed through the Setup menu on the device. 
-
 ## Set Date/Time
 
 Set the correct date and time to ensure accurate age calculations. You can verify the current date and time in the top right corner of the main scanning screen.
@@ -46,7 +44,7 @@ The Configuration screen controls age verification settings and scanner behavior
 {% /split %}
 
 {% callout type="note" %}
-If the IDVisor 3 is part of an IDVisor Sync network, highlighted settings will be locked. In a networked configuration, highlighted settings are centrally controlled by the IDVisor Sync software. Refer to IDVisor Sync documentation for details.
+If the IDVisor 3 is part of an IDVisor Sync network, highlighted settings will be locked, and are centrally controlled by the IDVisor Sync software. Refer to [IDVisor Sync documentation](https://support.tokenworks.com/portal/en/kb/tokenworks/idvisor-sync/how-to-guides) for details.
 {% /callout %}
 
 ### Advanced Settings
