@@ -39,6 +39,8 @@ This feature is not enabled on all devices. Upgrade your device to use passport 
 
 {% /split %}
 
+**Scanning distance:** Hold the scanner 4–8 inches from a barcode, or 6–7 inches from a passport MRZ zone, for best results.
+
 After scanning, the age is calculated from the date of birth. If the person is of age, the age icons display green. Other outcomes include ID Expired, Underage, Tagged User (Banned, VIP, etc.), and Anti-Passback alert.
 
 ![ID OK, ID Expired, Underage and Fake Alerts](/images/scanning-id-result.png)
@@ -155,9 +157,9 @@ Tapping an individual record displays a detailed view of that customer record in
 
 {% split image="/images/setup-menu.png" imageAlt="Set Up Menu" side="right" %}
 
-Tapping the **Setup** button will display a menu of functions that are typically used by a system  administrator. These functions can be protected by pin codes to keep settings and information  secure. 
+Tapping the **Setup** button will display a menu of functions that are typically used by a system  administrator. These functions can be protected by PIN codes to keep settings and information  secure. 
 
-The unit comes with a pre-initialized pin code (5678) for the following functions: Data base, Configuration, and Tag List. For further information and detailed instructions, please refer to the [Settings&nbsp;Chapter](#settings).
+The unit comes with a pre-initialized PIN code (5678) for the following functions: Database, Configuration, and Tag List. For further information and detailed instructions, please refer to the [Settings&nbsp;Chapter](#settings).
 
 {% /split %} 
 
@@ -183,13 +185,13 @@ For data security reasons, Barcode Detective may not be allowed under certain ci
 
 ## DMVCheck
 
-DMVCheck is TokenWorks' feature to ensure document authenticity. It is a pay-per-use service that allows a recently scanned ID to be checked against the issuing jurisdiction in 40+ states.
+DMVCheck is TokenWorks' feature to ensure document authenticity. It is a pay-per-use service that allows a recently scanned ID to be checked against the issuing jurisdiction in 44+ states.
 
 To access DMV Check, navigate to the ID Scanner form. The DMVCheck logo will be displayed on the bottom left of the screen. If this is your first time setting up DMVCheck on this device, tapping the DMVCheck logo will display a form to log in to your DMVCheck account.
 
 {% split image="/images/dmv-check.png" imageAlt="DMVCheck" side="right" %}
 
-Create an account at [account.tokenworks.net](https://account.tokenworks.net) if needed. After creating an account online, the same credentials can be entered in the DMVCheck form on your device. Once your Smart device is logged into your DMVCheck account and credits have  purchased on the account, you're ready to start using DMVCheck.
+Create an account at [account.tokenworks.net](https://account.tokenworks.net) if needed. After creating an account online, the same credentials can be entered in the DMVCheck form on your device. Once your smart device is logged into your DMVCheck account and credits have been purchased on the account, you're ready to start using DMVCheck.
 
 {% /split %}
 
@@ -198,7 +200,7 @@ Select the DMVCheck Logo in the bottom left of the screen after scanning an ID. 
 ![DMVCheck Result](/images/dmv-check-result.png)
 
 {% callout type="note" %}
-Always cross check the data displayed on the scanner versus what is shown on the front of  the ID. Some fake IDs have a 'cloned' data stripe of someone who is ‘of age’.
+Always cross check the data displayed on the scanner versus what is shown on the front of  the ID. Some fake IDs have a 'cloned' 2D barcode of someone who is ‘of age’.
 {% /callout %}
 
 ![Cross Check IDs](/images/cross-check-id.png)

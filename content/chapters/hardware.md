@@ -49,6 +49,6 @@ Save the Google account and PIN used on your ID Scanner. Losing this information
 
 ## Change PIN Code
 
-The unit comes with a pre-initialized pin code (5678) for the following functions: Database, Configuration, Tag List, and Close Application. You can change the PIN from the default by navigating to **Setup > Configuration > Advanced > Change Pincode**.
+The unit comes with a pre-initialized PIN code (5678) for the following functions: Database, Configuration, Tag List, and Close Application. You can change the PIN from the default by navigating to **Setup > Configuration > Advanced > Change Pincode**.
 
-Enter the current pin code, then the new pin code, and confirm by re-entering the new pin code. Press Save when done.
+Enter the current PIN code, then the new PIN code, and confirm by re-entering the new PIN code. Press Save when done.
